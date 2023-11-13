@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".loginActivity2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:text="Login Universidad" />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvemail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="Ingrese su email" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Email" />
+
+    <TextView
+        android:id="@+id/tvcontraseña"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Ingrese su contraseña" />
+
+    <EditText
+        android:id="@+id/etcontraseña"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="numberPassword"
+        android:hint="Contraseña" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btenviar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="23dp"
+            android:enabled="true"
+            android:onClick="Enviar"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:text="Enviar" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

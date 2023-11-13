@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1066044264718",
+    "project_id": "universidad-freddy",
+    "storage_bucket": "universidad-freddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066044264718:android:5186fe4360e443ac6ac75f",
+        "android_client_info": {
+          "package_name": "com.example.universidad_sabado"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaKdVNo8SQ8ytAFyo348EncZRV5fM-ak8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

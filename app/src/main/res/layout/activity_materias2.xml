@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MateriasActivity2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="Materias" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etcodigomateria"
+            android:layout_width="230dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Codigo materia"
+            android:inputType="number"
+            android:textSize="28dp" />
+
+        <Button
+            android:id="@+id/btconsultar"
+            android:layout_width="173dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="Consultar"
+            android:text="Consultar"
+            android:textSize="23dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etmateria"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:enabled="false"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nombre de la materia" />
+
+    <EditText
+        android:id="@+id/etcreditos"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:enabled="false"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Creditos de la materia" />
+
+    <EditText
+        android:id="@+id/etprofesor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nombre del profesor" />
+
+    <CheckBox
+        android:id="@+id/cbactivo"
+        android:layout_width="370dp"
+        android:textSize="25dp"
+        android:enabled="false"
+        android:layout_gravity="center"
+        android:layout_height="60dp"
+        android:text="Activo" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btguardar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="23dp"
+            android:enabled="false"
+            android:onClick="Guardar"
+            android:layout_weight="1"
+            android:text="Guardar" />
+
+        <Button
+            android:id="@+id/btcancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="23dp"
+            android:onClick="Limpiar"
+            android:enabled="false"
+            android:layout_weight="1"
+            android:text="Cancelar" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+    android:layout_width="370dp"
+    android:layout_height="60dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btactivar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textSize="23dp"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:onClick="Activar"
+        android:text="Activar" />
+
+    <Button
+        android:id="@+id/btregresar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textSize="23dp"
+        android:onClick="Retornar"
+        android:layout_marginLeft="7dp"
+        android:layout_weight="1"
+        android:text="Regresar" />
+</LinearLayout>
+
+
+
+
+</LinearLayout>
