@@ -2,6 +2,7 @@ package com.example.universidad_sabado;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -36,6 +37,12 @@ public class ListarEstudiantesActivity extends AppCompatActivity {
         tvaplicacion = findViewById(R.id.tvaplicacion);
         rvestudiantes = findViewById(R.id.rvestudiantes);
         alEstudiantes = new ArrayList<>();
+
+        rvestudiantes.setLayoutManager(new LinearLayoutManager(this.getApplicationContext()));
+        rvestudiantes.setHasFixedSize(true);
+
+
+
         //Consulta y la voy a llevar al ArrayList
         cargar_datos();
     }//Fin metodo onCreate
@@ -57,6 +64,9 @@ public class ListarEstudiantesActivity extends AppCompatActivity {
                                 objestudiantes.setSemestre(document.getString("Semestre"));
                                 alEstudiantes.add(objestudiantes);
                                 }
+                            //Adapate la informacion del ArrayList
+                            ClsEstudiantesAdapter aestudientes = new ClsEstudiantesAdapter(alEstudiantes);
+                            rvestudiantes.setAdapter(aestudientes);
                         } else {
                             //Log.w(TAG, "Error getting documents.", task.getException());
                         }

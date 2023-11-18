@@ -14,7 +14,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/etimagen"
+                android:id="@+id/ivimagen"
                 android:layout_width="100dp"
                 android:layout_height="121dp"
                 android:layout_marginLeft="15dp"
@@ -28,7 +28,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/etcarnet"
+                    android:id="@+id/tvcarnet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Carnet"
@@ -36,21 +36,21 @@
                     android:layout_marginLeft="10dp"/>
 
                 <TextView
-                    android:id="@+id/etnombre"
+                    android:id="@+id/tvnombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nombre"
                     android:layout_marginLeft="10dp"/>
 
                 <TextView
-                    android:id="@+id/etcarrera"
+                    android:id="@+id/tvcarrera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Carrera"
                     android:layout_marginLeft="10dp"/>
 
                 <TextView
-                    android:id="@+id/etsemestre"
+                    android:id="@+id/tvsemestre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semestre"
