@@ -11,7 +11,7 @@
         android:id="@+id/tvtitulo"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:textSize="30dp"
         android:gravity="center"
         android:text="Lista Estudiantes" />
@@ -30,7 +30,8 @@
         android:layout_width="370dp"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
-        android:layout_height="400dp" />
+        android:layout_height="480dp" />
+
 
     <Button
         android:id="@+id/btregresar"

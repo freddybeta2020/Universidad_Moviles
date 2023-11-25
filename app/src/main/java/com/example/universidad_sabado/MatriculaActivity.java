@@ -5,6 +5,9 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
+import android.widget.DatePicker;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +17,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -25,6 +30,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class MatriculaActivity extends AppCompatActivity {
@@ -32,7 +38,7 @@ public class MatriculaActivity extends AppCompatActivity {
     EditText etmatricula, etfecha, etcarnet, etmateria;
     Button btconsultarMatricula, btconsultarCarnet, btconsultarMateria, btadiccionar,
     btanular, btlimpiar, btregresar;
-    TextView tvnombre, tvmateria;
+    TextView tvnombre, tvmateria, tvcarrera;
     CheckBox cbactivo;
     String matricula, fecha, carnet,nombre, codigo_materia, nombre_materia, coleccion="Estudiante", clave, materias = "Materias", MatriculasEstudiante = "Matriculas";
 
@@ -58,8 +64,42 @@ public class MatriculaActivity extends AppCompatActivity {
         btregresar = findViewById(R.id.btregresar);
         tvnombre = findViewById(R.id.tvnombre);
         tvmateria = findViewById(R.id.tvmateria);
+        tvcarrera = findViewById(R.id.tvcarrera);
         cbactivo = findViewById(R.id.cbactivo);
 
+        // Obtén la fecha actual y configúrala en el EditText
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        etfecha.setText(dateFormat.format(calendar.getTime()));
+
+        // Configura un OnClickListener para mostrar un DatePickerDialog cuando se hace clic en el EditText
+        etfecha.setOnClickListener(view -> showDatePickerDialog());
+
+
+
+
+    }
+
+    private void showDatePickerDialog() {
+        // Configura y muestra el DatePickerDialog
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                (datePicker, selectedYear, selectedMonth, selectedDay) -> {
+                    calendar.set(selectedYear, selectedMonth, selectedDay);
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                    etfecha.setText(dateFormat.format(calendar.getTime()));
+                },
+                year,
+                month,
+                day
+        );
+
+        datePickerDialog.show();
     }
 
     public void Adicionar(View view){
@@ -190,6 +230,7 @@ public class MatriculaActivity extends AppCompatActivity {
                                         etcarnet.setText(document.getString("carnet"));
                                         tvnombre.setText(document.getString("nombre_estudiante"));
                                         tvmateria.setText(document.getString("nombre_materia"));
+
                                         if (document.getString("Activo").equals("Si")){
                                             cbactivo.setChecked(true);
                                         }else{
@@ -338,4 +379,8 @@ public class MatriculaActivity extends AppCompatActivity {
 
 
     }//Fin limpiar campos
+
+
+
+
 }
